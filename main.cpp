@@ -60,7 +60,9 @@ int main() {
 
 //    Shader shader("../shaders/HelloTriangle.vert", "../shaders/HelloTriangle.frag");
     //Shader para triagulo colorido
-    Shader shader("../shaders/HelloTriangle.vert", "../shaders/ColoredTriangle.frag");
+    char path1[] = "../../shaders/HelloTriangle.vert";
+    char path2[] = "../../shaders/ColoredTriangle.frag";
+    Shader shader(path1, path2);
 
 //    // dois triangulos com borda e vertice
 //    GLuint VAO = ex5();
@@ -90,8 +92,8 @@ int main() {
 
         glBindVertexArray(VAO);
 
-//        drawEx1(&shader);
-//        drawEx2(&shader, geometryCenter);
+        // drawEx1(&shader);
+        // drawEx2(&shader, geometryCenter);
         drawEx3(&shader, geometryCenter, directions, width, height);
 
         glBindVertexArray(0);
